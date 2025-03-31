@@ -10,6 +10,7 @@ public class userRepository {
 
     private List<userModel> usuarios = new ArrayList<>();
 
+    // Este constructor crea una lista en memoria de los usuarios, en lugar de usar una base de datos.
     public userRepository(){
         usuarios.add(new userModel(1, "Diomar", "Majano", "diomar@gmail.com", "123456", "San Salvador", "DDM"));
         usuarios.add(new userModel(2, "Carlos", "Perez", "carlos.perez@gmail.com", "654321", "Lima", "CTP"));
@@ -23,7 +24,18 @@ public class userRepository {
         usuarios.add(new userModel(10, "Fernando", "Castro", "fernando.castro@gmail.com", "admin123", "La Paz", "CTP"));
     }
 
+    // estamos creando este metodo para que el controlador pueda acceder a la lista de usuarios y obtener los datos de cada uno
     public List<userModel> obtenerUsuarios() {
         return usuarios;
+    }
+
+    // Este método permite obtener un usuario específico por su id
+    public userModel obtenerUsuarioPorId(int id) {
+        for (userModel usuario : usuarios) {
+            if (usuario.getId() == id) {
+                return usuario;
+            }
+        }
+        return null;
     }
 }
