@@ -2,10 +2,10 @@ package gestion.usuarios.usergestion.repository;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Repository;
 import gestion.usuarios.usergestion.model.userModel;
 
-@Service
+@Repository
 public class userRepository {
 
     private List<userModel> usuarios = new ArrayList<>();

@@ -3,11 +3,11 @@ package gestion.usuarios.usergestion.repository;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Repository;
 
 import gestion.usuarios.usergestion.model.rolesModel;
 
-@Service
+@Repository
 public class rolesRepository {
     private List<rolesModel> roles = new ArrayList<>();
     // Este constructor crea una lista en memoria de los roles
