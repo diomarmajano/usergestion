@@ -7,7 +7,6 @@ import gestion.usuarios.usergestion.repository.userRepository;
 import gestion.usuarios.usergestion.repository.rolesRepository;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-
 import gestion.usuarios.usergestion.model.rolesModel;
 import gestion.usuarios.usergestion.model.userModel;
 
